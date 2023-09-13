@@ -20,6 +20,8 @@ public class ErrorTip implements IErrorTip {
 
     /**
      * 有参构造
+     *
+     * @param tip 提示
      */
     public ErrorTip(String tip) {
         this.tip = tip;

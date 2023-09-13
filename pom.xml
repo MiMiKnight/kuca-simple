@@ -21,9 +21,9 @@
     <description>kuca-simple-spring-boot-starter</description>
 
     <scm>
-        <connection>https://github.com/MiMiKnight/kuca-ecology-spring-boot-starter/tree/dev_jdk8</connection>
+        <connection>https://github.com/MiMiKnight/kuca-simple-spring-boot-starter/tree/dev_jdk8</connection>
         <developerConnection>https://github.com/MiMiKnight</developerConnection>
-        <url>https://github.com/MiMiKnight/kuca-ecology-spring-boot-starter</url>
+        <url>https://github.com/MiMiKnight/kuca-simple-spring-boot-starter</url>
         <tag>0.0.1-SNAPSHOT-jdk8</tag>
     </scm>
 
@@ -55,6 +55,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
