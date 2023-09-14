@@ -11,5 +11,4 @@ import com.github.mimiknight.kuca.simple.error.tip.ErrorTip;
  * @since 2023-09-13 23:33:18
  */
 public interface ErrorTipErrorReturn extends IErrorReturn<ErrorTip> {
-
 }

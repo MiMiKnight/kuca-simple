@@ -1,6 +1,6 @@
 package com.github.mimiknight.kuca.simple.exception;
 
-import com.github.mimiknight.kuca.simple.error.standard.StringErrorReturn;
+import com.github.mimiknight.kuca.simple.error.standard.ErrorTipErrorReturn;
 import lombok.Getter;
 
 /**
@@ -14,16 +14,16 @@ public class BusinessException extends RuntimeException {
 
     private static final long serialVersionUID = -6162198998783603161L;
 
-    private final StringErrorReturn errorReturn;
+    private final transient ErrorTipErrorReturn errorReturn;
 
 
-    public BusinessException(StringErrorReturn eReturn) {
-        super(eReturn.getErrorCode() + "::" + eReturn.getMessage());
+    public BusinessException(ErrorTipErrorReturn eReturn) {
+        super(eReturn.getErrorCode() + "::" + eReturn.getMessage().getTip());
         this.errorReturn = eReturn;
     }
 
-    public BusinessException(StringErrorReturn eReturn, Throwable cause) {
-        super(eReturn.getErrorCode() + "::" + eReturn.getMessage(), cause);
+    public BusinessException(ErrorTipErrorReturn eReturn, Throwable cause) {
+        super(eReturn.getErrorCode() + "::" + eReturn.getMessage().getTip(), cause);
         this.errorReturn = eReturn;
     }
 }

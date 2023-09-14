@@ -5,6 +5,8 @@ import lombok.Getter;
 
 /**
  * 自定义参数校验异常
+ * <p>
+ * 手动校验参数异常
  *
  * @author MiMiKnight victor2015yhm@gmail.com
  * @since 2023-09-13 23:35:14
@@ -13,7 +15,7 @@ import lombok.Getter;
 public class ParamValidException extends RuntimeException {
 
     private static final long serialVersionUID = 7510949842232669220L;
-    private final ErrorTipErrorReturn errorReturn;
+    private final transient ErrorTipErrorReturn errorReturn;
 
 
     public ParamValidException(ErrorTipErrorReturn eReturn) {
