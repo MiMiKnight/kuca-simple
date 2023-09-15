@@ -1,6 +1,6 @@
 package com.github.mimiknight.kuca.simple.exception;
 
-import com.github.mimiknight.kuca.simple.error.standard.ErrorTipErrorReturn;
+import com.github.mimiknight.kuca.simple.error.standard.ErrorFieldTipErrorReturn;
 import lombok.Getter;
 
 /**
@@ -15,15 +15,15 @@ import lombok.Getter;
 public class ParamValidException extends RuntimeException {
 
     private static final long serialVersionUID = 7510949842232669220L;
-    private final transient ErrorTipErrorReturn errorReturn;
+    private final transient ErrorFieldTipErrorReturn errorReturn;
 
 
-    public ParamValidException(ErrorTipErrorReturn eReturn) {
+    public ParamValidException(ErrorFieldTipErrorReturn eReturn) {
         super(eReturn.getErrorCode() + "::" + eReturn.getMessage().getTip());
         this.errorReturn = eReturn;
     }
 
-    public ParamValidException(ErrorTipErrorReturn eReturn, Throwable cause) {
+    public ParamValidException(ErrorFieldTipErrorReturn eReturn, Throwable cause) {
         super(eReturn.getErrorCode() + "::" + eReturn.getMessage().getTip(), cause);
         this.errorReturn = eReturn;
     }
