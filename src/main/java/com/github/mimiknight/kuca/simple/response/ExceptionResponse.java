@@ -14,7 +14,7 @@ import lombok.Setter;
 @Builder
 @Setter
 @Getter
-public class ExceptionResponse {
+public final class ExceptionResponse {
 
     /**
      * HTTP状态码

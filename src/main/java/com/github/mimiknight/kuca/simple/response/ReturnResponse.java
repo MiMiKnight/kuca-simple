@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 成功响应类
+ * 成功时返回响应类
  *
  * @author MiMiKnight victor2015yhm@gmail.com
  * @since 2023-09-14 00:13:25
@@ -14,7 +14,7 @@ import lombok.Setter;
 @Builder
 @Setter
 @Getter
-public class SuccessResponse {
+public final class ReturnResponse {
 
     /**
      * HTTP状态码
