@@ -2,7 +2,7 @@ package com.github.mimiknight.kuca.simple.aspect;
 
 import com.github.mimiknight.kuca.simple.error.standard.IErrorReturn;
 import com.github.mimiknight.kuca.simple.error.standard.IErrorType;
-import com.github.mimiknight.kuca.simple.exception.BusinessException;
+import com.github.mimiknight.kuca.simple.exception.BizException;
 import com.github.mimiknight.kuca.simple.exception.ParamValidException;
 import com.github.mimiknight.kuca.simple.response.ExceptionResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -22,11 +22,11 @@ public abstract class BaseGlobalExceptionHandle {
     /**
      * 处理 自定义业务异常
      *
-     * @param e 异常类型 {@link BusinessException}
+     * @param e 异常类型 {@link BizException}
      * @return {@link ResponseEntity}
      */
-    @ExceptionHandler(value = BusinessException.class)
-    public ResponseEntity<ExceptionResponse> handle(BusinessException e) {
+    @ExceptionHandler(value = BizException.class)
+    public ResponseEntity<ExceptionResponse> handle(BizException e) {
         return buildEntity(e.getErrorReturn());
     }
 
@@ -34,7 +34,7 @@ public abstract class BaseGlobalExceptionHandle {
     /**
      * 处理 自定义（手动）校验参数异常
      *
-     * @param e 异常类型 {@link BusinessException}
+     * @param e 异常类型 {@link BizException}
      * @return {@link ResponseEntity}
      */
     @ExceptionHandler(value = ParamValidException.class)
