@@ -42,13 +42,14 @@ public abstract class BaseGlobalExceptionHandle {
         return buildEntity(e.getErrorReturn());
     }
 
+    //******************************************************************************************************************//
+
     /**
      * 构建异常响应
      *
      * @param eReturn 错误返回对象
      * @return {@link ResponseEntity}
      */
-
     protected ResponseEntity<ExceptionResponse> buildEntity(IErrorReturn<?> eReturn) {
         int statusCode = eReturn.getErrorType().getStatusCode();
         ExceptionResponse body = buildBody(eReturn);

@@ -20,12 +20,16 @@ public class BizException extends RuntimeException {
 
 
     public BizException(ErrorTipErrorReturn eReturn) {
-        super(eReturn.getErrorCode() + "::" + eReturn.getMessage().getTip());
+        super(message(eReturn));
         this.errorReturn = eReturn;
     }
 
     public BizException(ErrorTipErrorReturn eReturn, Throwable cause) {
-        super(eReturn.getErrorCode() + "::" + eReturn.getMessage().getTip(), cause);
+        super(message(eReturn), cause);
         this.errorReturn = eReturn;
+    }
+
+    public static String message(ErrorTipErrorReturn eReturn) {
+        return eReturn.getErrorCode() + "::" + eReturn.getMessage().getTip();
     }
 }

@@ -1,0 +1,43 @@
+{
+  "groups": [],
+  "properties": [
+    {
+      "name": "kuca.simple.database-timezone",
+      "type": "java.lang.String",
+      "defaultValue": "UTC",
+      "description": "数据库默认时区，设置该参数后自动将java时间转换为指定时区后存入数据库",
+      "sourceType": "com.github.mimiknight.kuca.simple.properties.KucaSimpleProperty"
+    }
+  ],
+  "hints": [
+    {
+      "name": "kuca.simple.database-timezone",
+      "values": [
+        {
+          "value": "UTC",
+          "description": "UTC时区"
+        },
+        {
+          "value": "+01:00",
+          "description": "东一区"
+        },
+        {
+          "value": "+02:00",
+          "description": "东二区"
+        },
+        {
+          "value": "+03:00",
+          "description": "东三区"
+        },
+        {
+          "value": "+04:00",
+          "description": "东四区"
+        },
+        {
+          "value": "+05:00",
+          "description": "东五区"
+        }
+      ]
+    }
+  ]
+}
