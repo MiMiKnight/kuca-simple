@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 public class ErrorTip implements IErrorTip {
 
-    @JsonProperty(value = "tip")
+    @JsonProperty(value = "tip", index = Byte.MAX_VALUE)
     private String tip;
 
     /**

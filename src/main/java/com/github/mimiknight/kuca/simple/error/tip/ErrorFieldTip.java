@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 public class ErrorFieldTip extends ErrorTip {
 
-    @JsonProperty(value = "field")
+    @JsonProperty(value = "field", index = Byte.MAX_VALUE - 1)
     private String field;
 
 
